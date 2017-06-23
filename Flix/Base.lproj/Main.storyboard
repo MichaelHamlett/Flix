@@ -91,7 +91,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="288"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecf-8T-8Wt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecf-8T-8Wt" userLabel="Border Image View">
                                 <rect key="frame" x="5" y="264" width="108" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,6 +174,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="posterImageView" destination="20X-9j-mZn" id="7Lq-eD-T0U"/>
+                                            <segue destination="GWV-bh-Z5p" kind="show" id="F4i-KT-It4"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -190,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="1720.8" y="-638.2308845577212"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail2 View Controller-->
         <scene sceneID="gRo-YP-faf">
             <objects>
-                <viewController id="GWV-bh-Z5p" sceneMemberID="viewController">
+                <viewController id="GWV-bh-Z5p" customClass="Detail2ViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UKu-pz-u3e"/>
                         <viewControllerLayoutGuide type="bottom" id="INd-eJ-E6S"/>
@@ -201,12 +202,57 @@
                     <view key="view" contentMode="scaleToFill" id="6mB-SB-vVH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s84-6k-vcq" userLabel="Backdrop Image View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="288"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5B-nd-AyU" userLabel="Border Image View">
+                                <rect key="frame" x="5" y="264" width="108" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64E-UW-Ijc" userLabel="Poster Image View">
+                                <rect key="frame" x="7.5" y="266.5" width="103" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcQ-wJ-1d4">
+                                <rect key="frame" x="121" y="360" width="254" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMx-gG-1c0">
+                                <rect key="frame" x="121" y="389" width="254" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11y-e6-xHy">
+                                <rect key="frame" x="16" y="433" width="343" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="backDropImageView" destination="s84-6k-vcq" id="CSE-ef-zMs"/>
+                        <outlet property="descriptionLabel" destination="11y-e6-xHy" id="G5s-0b-fNE"/>
+                        <outlet property="posterImageView" destination="64E-UW-Ijc" id="N0v-fd-llo"/>
+                        <outlet property="releaseDateLabel" destination="eMx-gG-1c0" id="NlW-uw-T33"/>
+                        <outlet property="titleLabel" destination="YcQ-wJ-1d4" id="cRL-ou-JRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRT-cJ-aFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2433" y="-638"/>
+            <point key="canvasLocation" x="2432.8000000000002" y="-638.2308845577212"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="tfP-U1-Ta3">
