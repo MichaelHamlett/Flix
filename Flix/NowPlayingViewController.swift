@@ -29,13 +29,26 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     }
     
     func fetchMovies() {
-        loadingIndicator.startAnimating()
+        self.pleaseWait()
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a06d91c1c64b7b127defb0bec66fbfe4")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
             //this will run when network request returns
             if let error = error {
+                let alertController = UIAlertController(title: "Network Error", message: "Cannot retrieve movie data", preferredStyle: .alert)
+                // create a cancel action
+                let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
+                    // handle cancel response here. Doing nothing will dismiss the view.
+                }
+                // add the cancel action to the alertController
+                alertController.addAction(cancelAction)
+                
+                self.clearAllNotice()
+                self.present(alertController, animated: true) {
+                    // optional code for what happens after the alert controller has finished presenting
+                }
+                
                 print(error.localizedDescription)
             }
             else if let data = data {
@@ -44,7 +57,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
                 self.movies = movies
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
-                self.loadingIndicator.stopAnimating()
+                self.clearAllNotice()
             }
         }
         task.resume()
