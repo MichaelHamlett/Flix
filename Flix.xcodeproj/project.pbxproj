@@ -11,6 +11,8 @@
 		5FC0229426CB017A3424A97A /* Pods_FlixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0738AA31400A876354D1D1 /* Pods_FlixTests.framework */; };
 		CC0225B71EFC84C300D8F5A2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0225B61EFC84C300D8F5A2 /* DetailViewController.swift */; };
 		CC0225BA1EFC940600D8F5A2 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0225B91EFC940600D8F5A2 /* SwiftNotice.swift */; };
+		CC0225BC1EFC9C5A00D8F5A2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0225BB1EFC9C5A00D8F5A2 /* CollectionViewController.swift */; };
+		CC4E1D841EFC9E8E00C4B31A /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E1D831EFC9E8E00C4B31A /* PosterCell.swift */; };
 		CCD572171EFB0E9600554777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD572161EFB0E9600554777 /* AppDelegate.swift */; };
 		CCD5721C1EFB0E9600554777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD5721A1EFB0E9600554777 /* Main.storyboard */; };
 		CCD5721E1EFB0E9600554777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD5721D1EFB0E9600554777 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		C2A296EB3B37A09E6252AA87 /* Pods-FlixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlixTests/Pods-FlixTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC0225B61EFC84C300D8F5A2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CC0225B91EFC940600D8F5A2 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftNotice.swift; path = "../../../Downloads/SwiftNotice-swift3/SwiftNotice.swift"; sourceTree = "<group>"; };
+		CC0225BB1EFC9C5A00D8F5A2 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		CC4E1D831EFC9E8E00C4B31A /* PosterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		CCD572131EFB0E9600554777 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD572161EFB0E9600554777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCD5721B1EFB0E9600554777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			children = (
 				CC0225B61EFC84C300D8F5A2 /* DetailViewController.swift */,
 				CCD572441EFB204100554777 /* NowPlayingViewController.swift */,
+				CC0225BB1EFC9C5A00D8F5A2 /* CollectionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				CCD572461EFB2ED700554777 /* MovieCell.swift */,
+				CC4E1D831EFC9E8E00C4B31A /* PosterCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -479,10 +485,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC0225BC1EFC9C5A00D8F5A2 /* CollectionViewController.swift in Sources */,
 				CCD572451EFB204100554777 /* NowPlayingViewController.swift in Sources */,
 				CCD572171EFB0E9600554777 /* AppDelegate.swift in Sources */,
 				CCD572471EFB2ED700554777 /* MovieCell.swift in Sources */,
 				CC0225BA1EFC940600D8F5A2 /* SwiftNotice.swift in Sources */,
+				CC4E1D841EFC9E8E00C4B31A /* PosterCell.swift in Sources */,
 				CC0225B71EFC84C300D8F5A2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
