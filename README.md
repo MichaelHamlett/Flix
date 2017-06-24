@@ -31,8 +31,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2.
+1. Adding trailers to the app
+2. Minimizing the number of view controllers
 
 ## Video Walkthrough
 
@@ -46,7 +46,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
-## Credits
+-Accessing data from the movie API
 
 List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
