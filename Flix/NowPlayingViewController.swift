@@ -15,12 +15,18 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UISearc
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+ 
+    
     var filteredMovies : [[String:Any]] = []
     var movies : [[String: Any]] = []
     var refreshControl : UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
+        
         searchBar.delegate = self
         
         refreshControl = UIRefreshControl()
